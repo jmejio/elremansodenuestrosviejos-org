@@ -1,0 +1,77 @@
+/*
+  El Remanso de Nuestros Viejos: theme on top of Bootstrap 5.3.
+  Loaded AFTER bootstrap.min.css. To change the colors, edit the variables below.
+*/
+
+:root {
+  /* Main green (headings, borders, cards) and a darker green for text links */
+  --bs-primary: #2e7d32;
+  --bs-primary-rgb: 46, 125, 50;
+  --bs-link-color: #1b5e20;
+  --bs-link-color-rgb: 27, 94, 32;
+  --bs-link-hover-color: #144a18;
+  --bs-link-hover-color-rgb: 20, 74, 24;
+
+  /* Light green used for alternating section backgrounds (.bg-primary-subtle) */
+  --bs-primary-bg-subtle: #e8f5e9;
+  --bs-primary-border-subtle: #a5d6a7;
+  --bs-primary-text-emphasis: #1b5e20;
+
+  /* Larger text than Bootstrap's default (16px) for easier reading */
+  --bs-body-font-size: 1.125rem;
+
+  /* Keep anchored sections clear of the sticky navbar */
+  scroll-padding-top: 6rem;
+}
+
+/* White navbar (the logo has dark text) with dark green links */
+.navbar {
+  --bs-navbar-color: var(--bs-link-color);
+  --bs-navbar-hover-color: var(--bs-link-color);
+  --bs-navbar-active-color: var(--bs-primary);
+  --bs-navbar-brand-color: var(--bs-link-color);
+  --bs-navbar-brand-hover-color: var(--bs-primary);
+}
+
+/* Menu links get a light green background on hover and keyboard focus */
+.navbar .nav-link { border-radius: .375rem; }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible { background-color: var(--bs-primary-bg-subtle); }
+
+/* Logo sizes: height sets the size, width follows the image proportions */
+.logo-nav { height: 3.5rem; width: auto; }
+.logo-footer { height: 8rem; width: auto; }
+
+/* Phones and tablets: keep logo, name and menu button on one row (the name wraps if needed) */
+@media (max-width: 991.98px) {
+  .navbar-brand { flex: 1 1 0; min-width: 0; font-size: 1rem; line-height: 1.25; }
+  .logo-nav { height: 3rem; }
+}
+
+/* Regular weight is easier to read than Bootstrap's thin .lead */
+.lead { font-weight: 400; }
+
+/* Carousel: larger tap targets for the dots and clearer arrows over photos */
+.carousel-indicators [data-bs-target] {
+  width: 36px;
+  height: 6px;
+  border-top-width: 19px;
+  border-bottom-width: 19px;
+}
+.carousel-control-prev,
+.carousel-control-next { opacity: .9; }
+.carousel-control-prev-icon,
+.carousel-control-next-icon { filter: drop-shadow(0 0 4px rgba(0, 0, 0, .7)); }
+
+/* Outline buttons in the site green (Bootstrap hard-codes blue for .btn-outline-primary) */
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-link-color);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-link-color);
+  --bs-btn-active-border-color: var(--bs-link-color);
+}
