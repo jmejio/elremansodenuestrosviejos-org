@@ -19,6 +19,7 @@
 
   /* Larger text than Bootstrap's default (16px) for easier reading */
   --bs-body-font-size: 1.125rem;
+  --bs-body-font-family: Georgia, "Times New Roman", serif;
 
   /* Keep anchored sections clear of the sticky navbar */
   scroll-padding-top: 6rem;
