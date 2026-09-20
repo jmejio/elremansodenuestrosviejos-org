@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-label="Ilustracion decorativa de colinas y hojas">
+  <g fill="none" stroke="#2e7d32" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="1320" cy="145" r="58" stroke-width="6"/>
+    <path d="M0 520c210-170 390-175 570-20 190 163 385 140 570-35 170-160 300-155 460-15" stroke-width="9"/>
+    <path d="M0 610c235-120 420-90 605 8 205 109 390 90 565-30 160-110 290-100 430-20" stroke-width="7"/>
+    <path d="M265 590c-8-90 8-160 55-218M320 372c-48-18-91-4-116 33 49 20 88 9 116-33Zm-8 49c52-22 96-11 125 23-48 24-90 16-125-23Z" stroke-width="7"/>
+    <path d="M1270 590c4-72 28-126 76-170M1345 420c-40-15-76-4-98 28 42 17 75 8 98-28Zm-8 43c44-17 79-6 101 23-41 19-75 11-101-23Z" stroke-width="7"/>
+  </g>
+</svg>

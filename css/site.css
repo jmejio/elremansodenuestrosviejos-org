@@ -36,8 +36,12 @@
 
 /* Menu links get a light green background on hover and keyboard focus */
 .navbar .nav-link { border-radius: .375rem; }
+.navbar .nav-item + .nav-item { border-left: 1px solid var(--bs-primary-border-subtle); }
 .navbar .nav-link:hover,
-.navbar .nav-link:focus-visible { background-color: var(--bs-primary-bg-subtle); }
+.navbar .nav-link:focus-visible {
+  background-color: var(--bs-primary-bg-subtle);
+  box-shadow: inset 0 -3px 0 var(--bs-primary);
+}
 
 /* Logo sizes: height sets the size, width follows the image proportions */
 .logo-nav { height: 3.5rem; width: auto; }
@@ -47,11 +51,49 @@
 @media (max-width: 991.98px) {
   .navbar-brand { flex: 1 1 0; min-width: 0; font-size: 1rem; line-height: 1.25; }
   .logo-nav { height: 3rem; }
+  .navbar .nav-item + .nav-item { border-left: 0; border-top: 1px solid var(--bs-primary-border-subtle); }
 }
 
 /* Regular weight is easier to read than Bootstrap's thin .lead */
 .lead { font-weight: 400; }
 
+section > .container > h2 {
+  position: relative;
+  padding-bottom: .75rem;
+}
+section > .container > h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: .2rem;
+  margin-top: .55rem;
+  background-color: var(--bs-primary-border-subtle);
+  border-radius: 100%;
+}
+.section-subtitle {
+  display: inline-block;
+  max-width: 100%;
+  padding-bottom: .45rem;
+  border-bottom: 3px solid var(--bs-primary-border-subtle);
+  line-height: 1.15;
+}
+
+.bg-primary-subtle {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.bg-primary-subtle::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("../assets/images/hearts-clouds.svg");
+  background-size: cover;
+  background-position: center;
+  opacity: .07;
+}
+.hero-section::before { opacity: .14; }
 .hero-copy { max-width: 34rem; }
 .hero-title { line-height: 1.05; }
 .hero-media {
@@ -60,6 +102,14 @@
   border: 1px solid var(--bs-primary-border-subtle);
   border-radius: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(27, 94, 32, .14);
+}
+.hero-media::after {
+  content: "";
+  display: block;
+  height: .35rem;
+  margin: .65rem 3rem 0;
+  background-color: var(--bs-primary-border-subtle);
+  border-radius: 100%;
 }
 
 /* Carousel: larger tap targets for the dots and clearer arrows over photos */
