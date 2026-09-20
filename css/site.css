@@ -52,6 +52,16 @@
 /* Regular weight is easier to read than Bootstrap's thin .lead */
 .lead { font-weight: 400; }
 
+.hero-copy { max-width: 34rem; }
+.hero-title { line-height: 1.05; }
+.hero-media {
+  padding: .5rem;
+  background-color: #fff;
+  border: 1px solid var(--bs-primary-border-subtle);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(27, 94, 32, .14);
+}
+
 /* Carousel: larger tap targets for the dots and clearer arrows over photos */
 .carousel-indicators [data-bs-target] {
   width: 36px;
@@ -63,6 +73,10 @@
 .carousel-control-next { opacity: .9; }
 .carousel-control-prev-icon,
 .carousel-control-next-icon { filter: drop-shadow(0 0 4px rgba(0, 0, 0, .7)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item { transition: none; }
+}
 
 /* Outline buttons in the site green (Bootstrap hard-codes blue for .btn-outline-primary) */
 .btn-outline-primary {
