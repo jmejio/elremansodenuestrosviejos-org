@@ -78,12 +78,14 @@ section > .container > h2::after {
   line-height: 1.15;
 }
 
-.bg-primary-subtle {
+section.bg-primary-subtle,
+footer .bg-primary-subtle {
   position: relative;
   isolation: isolate;
   overflow: hidden;
 }
-.bg-primary-subtle::before {
+section.bg-primary-subtle::before,
+footer .bg-primary-subtle::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -123,6 +125,16 @@ section > .container > h2::after {
 .carousel-control-next { opacity: .9; }
 .carousel-control-prev-icon,
 .carousel-control-next-icon { filter: drop-shadow(0 0 4px rgba(0, 0, 0, .7)); }
+
+#fotos-sede {
+  display: block;
+  width: 100%;
+}
+#fotos-sede .carousel-inner,
+#fotos-sede .carousel-item.active,
+#fotos-sede .carousel-item.active .ratio {
+  display: block;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .carousel-item { transition: none; }
