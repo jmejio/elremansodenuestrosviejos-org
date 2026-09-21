@@ -45,7 +45,7 @@
 
 /* Logo sizes: height sets the size, width follows the image proportions */
 .logo-nav { height: 3.5rem; width: auto; }
-.logo-footer { height: 8rem; width: auto; }
+.logo-footer { height: 10rem; width: auto; }
 
 /* Phones and tablets: keep logo, name and menu button on one row (the name wraps if needed) */
 @media (max-width: 991.98px) {
